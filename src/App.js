@@ -67,38 +67,7 @@ function App() {
     <ProvidersForm trip={trip} />
     <HotelsForm trip={trip} />
 
-    {/* <form>
-     <div className="card row mt-5"></div>
-    <div className="card-header"><h2>List of Travels</h2></div>
-    <div className="form-group">
-    </div>
-    <button>Create Travel</button>
-    </form>
-
-    <div>
-    <div className="card row mt-5">
-    <div>Travel info</div>
-              <button>Edit</button>
-              <button>Continue Trip</button>
-           
-          </div>
-    <table className="form-group">
-        <thead>
-          <tr>
-              <th scope="row 1">Providers contact info</th>
-              <th scope="row 2">Add providers</th>
-              <th scope="row 3">Trips history </th>
-              <button className="btn btn-primary mt-3 mb-3" type='submit' id='submit' name='submit'>Start Trip</button>
-          </tr>
-        </thead>
-          <tbody> </tbody>
-        </table>
-
-    </div> */}
-
-
-
-    </>
+        </>
 
   
       

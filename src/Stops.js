@@ -6,13 +6,20 @@ function Stops({trip}) {
   useEffect(() => {
     fetch(`http://localhost:9292/trips/${trip.id}/stops`)
     .then((r) => r.json())
-    .then((data) => {
-      debugger
-      setStop(data)});
+    .then((data) => {setStop(data)});
   }, [])
 
+  function deleteId(id) {
+    console.log("delete stop")
+    fetch(`http://localhost:9292/trips/${trip.id}/stops/${id}`, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json"  }
+    }).then((r) => r.json())
+      .then((data) => setStop(data));
+  }
+
   if (stops.length == 0) {
-    return (<h1>nope</h1>)
+    return (<h1>No Stops found</h1>)
   }
 
   return(
@@ -27,7 +34,7 @@ function Stops({trip}) {
               <div  className="card text-white bg-info mb-3" key={stop.id}>
                 <div className="card-header d-flex justify-content-between">
                   <h5>Stop {index + 1}</h5>
-                  <button className="btn btn-danger">X</button>
+                  <div onClick={() => deleteId(stop.id)} className="btn btn-danger">X</div>
                 </div>
                 <div className="card-body ">
                   <div><span className="font-weight-bold">Stop Reason:</span> {stop.stop_reason} </div>

@@ -1,4 +1,5 @@
 function StopsForm({trip}) {
+
   return(
     <div className="card mt-5 mb-2" >
      <div className="card-header"><h2>New Stop</h2></div>
