@@ -25,11 +25,14 @@ function Stops({trip}) {
           {stops.map( (stop, index) => {
             return(
               <div  className="card text-white bg-info mb-3" key={stop.id}>
-                <div className="card-body">
-                <div className=""><h5>Stop {index + 1}</h5></div>
+                <div className="card-header d-flex justify-content-between">
+                  <h5>Stop {index + 1}</h5>
+                  <button className="btn btn-danger">X</button>
+                </div>
+                <div className="card-body ">
                   <div><span className="font-weight-bold">Stop Reason:</span> {stop.stop_reason} </div>
                   <div><span className="font-weight-bold">Notes:</span> {stop.note}</div>
-                  <div><span className="font-weight-bold">Cost:</span> {stop.cost}</div>
+                  {/* <div><span className="font-weight-bold">Cost:</span> {stop.cost.amount}</div> */}
                 </div>
               </div>
             )

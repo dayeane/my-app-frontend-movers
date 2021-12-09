@@ -17,7 +17,7 @@ function TripSummary({trip}) {
           </div>
 
           <div className="d-flex justify-content-around mt-2">
-            <p className="col"><span className="font-weight-bold">Total Spent:</span> { trip.costs.map(x => x.amount).reduce((x, y) => x + y) }</p>
+            <p className="col"><span className="font-weight-bold">Total Expenses:</span> { trip.costs.map(x => x.amount).reduce((x, y) => x + y) }</p>
           </div>
         </div>
       </div>

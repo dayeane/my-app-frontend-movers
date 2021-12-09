@@ -5,6 +5,10 @@ import TripSummary from "./TripSummary";
 import Hotels from "./Hotels";
 import Providers from "./Providers";
 import Stops from "./Stops";
+import TripForm from "./TripForm";
+import StopsForm from "./StopsForm";
+import ProvidersForm from "./ProvidersForm";
+import HotelsForm from "./HotelsForm";
 
 function App() {
   const [trip, setTrip] = useState({});
@@ -58,6 +62,11 @@ function App() {
     <Hotels trip={trip} />
     <Providers trip={trip} />
     <Stops trip={trip} />
+    <TripForm trip={trip} />
+    <StopsForm trip={trip} />
+    <ProvidersForm trip={trip} />
+    <HotelsForm trip={trip} />
+
     {/* <form>
      <div className="card row mt-5"></div>
     <div className="card-header"><h2>List of Travels</h2></div>
