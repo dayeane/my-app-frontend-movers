@@ -22,8 +22,8 @@ function App() {
     fetch(`http://localhost:9292/trips/${tripId.current.value}`)
     .then((r) => r.json())
     .then((data) => {
-      setTrip(data)
       console.log(data)
+      setTrip(data)
     });
   }
 
@@ -35,7 +35,7 @@ function App() {
           <h1>Moving Cost Trip</h1>
         </div>
         <div className="card mt-5 text-center">
-          <div class="card-header">
+          <div className="card-header">
             Select A trip ID
           </div>
           <form className="col-6 offset-3 mt-5 mb-5" onSubmit={getTrip}>
