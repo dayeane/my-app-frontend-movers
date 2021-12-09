@@ -10,7 +10,6 @@ function Stops({trip}) {
   }, [])
 
   function deleteId(id) {
-    console.log("delete stop")
     fetch(`http://localhost:9292/trips/${trip.id}/stops/${id}`, {
       method: "DELETE",
       headers: { "Content-Type": "application/json"  }
