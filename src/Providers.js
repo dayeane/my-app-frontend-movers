@@ -1,4 +1,5 @@
 import {useState} from "react"
+import ProvidersForm from "./ProvidersForm";
 
 function Providers({trip}) {
   const [providers, setProviders] = useState(trip.providers);
@@ -9,11 +10,6 @@ function Providers({trip}) {
       headers: { "Content-Type": "application/json"  }
     }).then((r) => r.json())
       .then((data) => setProviders(data));
-  }
-
-
-  if (providers.length == 0) {
-    return (<h1>No Providers found</h1>)
   }
 
   return(
@@ -41,6 +37,8 @@ function Providers({trip}) {
           })}
         </div>
       </div>
+
+      <ProvidersForm trip={trip} />
     </>
   )
 }

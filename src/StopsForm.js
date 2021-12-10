@@ -2,7 +2,7 @@ function StopsForm({trip}) {
 
   return(
     <div className="card mt-5 mb-2" >
-     <div className="card-header"><h2>New Stop</h2></div>
+     <div className="card-header"><h4>New Stop</h4></div>
        <form>
         <input className=" mr-4 " type="text" name="stop reason" placeholder="Stop reason"/> 
         <input className=" mr-4"  type="text" name="notes" placeholder="Notes"/> 

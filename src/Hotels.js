@@ -25,8 +25,7 @@ function Hotels({trip}) {
           {hotels.map((hotel, index) => <Hotel key={hotel.id} hotel={hotel} index={index} deleteId={deleteId} /> )}
         </div>
       </div>
-      <HotelsForm trip={trip} />
-
+      <HotelsForm trip={trip} setHotels={setHotels}/>
     </>
   )
 }

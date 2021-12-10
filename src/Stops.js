@@ -1,4 +1,5 @@
 import {useState, useEffect} from "react"
+import StopsForm from "./StopsForm";
 
 function Stops({trip}) {
   const [stops, setStop] = useState([]);
@@ -15,10 +16,6 @@ function Stops({trip}) {
       headers: { "Content-Type": "application/json"  }
     }).then((r) => r.json())
       .then((data) => setStop(data));
-  }
-
-  if (stops.length == 0) {
-    return (<h1>No Stops found</h1>)
   }
 
   return(
@@ -45,6 +42,8 @@ function Stops({trip}) {
           })}
         </div>
       </div>
+
+      <StopsForm trip={trip} />
     </>
   )
 }

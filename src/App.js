@@ -6,8 +6,6 @@ import Hotels from "./Hotels";
 import Providers from "./Providers";
 import Stops from "./Stops";
 import TripForm from "./TripForm";
-import StopsForm from "./StopsForm";
-import ProvidersForm from "./ProvidersForm";
 
 function App() {
   const [trip, setTrip] = useState({});
@@ -53,8 +51,6 @@ function App() {
       <Hotels trip={trip} />
       <Providers trip={trip} />
       <Stops trip={trip} />
-      <StopsForm trip={trip} />
-      <ProvidersForm trip={trip} />
     </>
 
   
