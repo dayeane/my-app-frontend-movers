@@ -4,6 +4,7 @@ function ProvidersForm({trip, setProviders}) {
   const name = useRef('');
   const date = useRef('');
   const note = useRef('');
+  const cost = useRef('');
 
   function createProvider(e) {
     e.preventDefault();
@@ -14,7 +15,8 @@ function ProvidersForm({trip, setProviders}) {
         name: name.current.value,
         date: date.current.value,
         note: note.current.value,
-      }
+      },
+      cost: cost.current.value
     }
 
     fetch(`http://localhost:9292/trips/${trip.id}/providers`, {
@@ -39,6 +41,7 @@ function ProvidersForm({trip, setProviders}) {
         <input className="mr-4" ref={name} type="text" name="name" placeholder="Name"/> 
         <input className="mr-4" ref={date} type="date" name="date" placeholder="Date"/> 
         <input className="mr-4" ref={note} type="text" name="notes" placeholder="Notes"/> 
+        <input className="mr-4" ref={note} type="text" name="cost" placeholder="Cost"/> 
         <button type="submit" className="btn btn-primary mt-2 mb-2 mr-6">Submit</button>
       </form>
     </div>

@@ -30,6 +30,7 @@ function Providers({trip}) {
                   <p><span className="font-weight-bold">Name:</span> {provider.name}</p>
                   <p><span className="font-weight-bold">Date:</span> {provider.date}</p>
                   <p><span className="font-weight-bold">Note:</span> {provider.note}</p>
+                  <p><span className="font-weight-bold">Cost:</span> {provider.cost.amount}</p>
                 </div>
               </div>
             )

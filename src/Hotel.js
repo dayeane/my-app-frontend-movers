@@ -1,6 +1,6 @@
 function Hotel({hotel, index, deleteId}) {
   return(
-    <div  className="card text-white bg-info mb-3">
+    <div className="card text-white bg-info mb-3">
       <div className="card-header d-flex justify-content-between">
         <h5>Hotel {index + 1} </h5>
         <div onClick={() => deleteId(hotel.id)} className="btn btn-danger">X</div>
