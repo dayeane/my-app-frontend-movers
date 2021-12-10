@@ -5,8 +5,8 @@ function TripEditForm({trip, setCurrentTrip, setEditMode, editMode}) {
   const [to, setTo] = useState(trip.to)
   const [date, setDate] = useState(trip.depart_date)
   const [budget, setBudget] = useState(trip.budget)
-  console.log(trip)
-  function createTrip(e) {
+ 
+  function updateTrip(e) {
     e.preventDefault();
 
     const editedTrip = {
@@ -41,7 +41,7 @@ function TripEditForm({trip, setCurrentTrip, setEditMode, editMode}) {
           <label className="custom-control-label" htmlFor="customSwitch1">Toggle this box exit edit mode</label>
         </div>
       </div>
-      <form className="ml-4" onSubmit={createTrip}>
+      <form className="ml-4" onSubmit={updateTrip}>
         <input onChange={(e) => {setFrom(e.target.value)}} value={from} className="mb-2 mr-2" type="text" name="from" placeholder="From"/> 
         <input onChange={(e) => {setTo(e.target.value)}} value={to}  className="mr-4" type="text" name="to" placeholder="To"/> 
         <input onChange={(e) => {setDate(e.target.value)}} value={date}  className="mr-4"  type='date' name="depart-date" placeholder="Depart Date"/> 
