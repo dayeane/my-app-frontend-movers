@@ -1,4 +1,15 @@
 function TripSummary({trip}) {
+  let total_cost = 0
+
+  if (!trip) {
+    return(
+      <h1>no trip selected please refresh</h1>
+    )
+  }
+
+  if(trip.costs.length > 0) {
+    total_cost = trip.costs.map(x => x.amount).reduce((x, y) => x + y)
+  }
 
   return (
     <>
@@ -17,7 +28,7 @@ function TripSummary({trip}) {
           </div>
 
           <div className="d-flex justify-content-around mt-2">
-            <p className="col"><span className="font-weight-bold">Total Expenses:</span> { trip.costs.map(x => x.amount).reduce((x, y) => x + y) }</p>
+            <p className="col"><span className="font-weight-bold">Total Expenses:</span> { total_cost }</p>
           </div>
         </div>
       </div>

@@ -8,17 +8,10 @@ import Stops from "./Stops";
 import TripForm from "./TripForm";
 import StopsForm from "./StopsForm";
 import ProvidersForm from "./ProvidersForm";
-import HotelsForm from "./HotelsForm";
 
 function App() {
   const [trip, setTrip] = useState({});
   const tripId = useRef('');
-
-  // useEffect(() => {
-  //   fetch("http://localhost:9292/trips")
-  //   .then((r) => r.json())
-  //   .then((data) => console.log(data));
-  // },[])
 
 
   function getTrip(e) {
@@ -26,7 +19,6 @@ function App() {
     fetch(`http://localhost:9292/trips/${tripId.current.value}`)
     .then((r) => r.json())
     .then((data) => {
-      console.log(data)
       setTrip(data)
     });
   }
@@ -49,25 +41,21 @@ function App() {
             <button type="submit" className="btn btn-primary">Submit</button>
           </form>
         </div>
+
+        <TripForm trip={trip} setTrip={setTrip}/>
       </>
     )
   }
 
   return (
-  <>
-    
-
-  
-    <TripSummary trip={trip} />
-    <Hotels trip={trip} />
-    <Providers trip={trip} />
-    <Stops trip={trip} />
-    <TripForm trip={trip} />
-    <StopsForm trip={trip} />
-    <ProvidersForm trip={trip} />
-    <HotelsForm trip={trip} />
-
-        </>
+    <>
+      <TripSummary trip={trip} />
+      <Hotels trip={trip} />
+      <Providers trip={trip} />
+      <Stops trip={trip} />
+      <StopsForm trip={trip} />
+      <ProvidersForm trip={trip} />
+    </>
 
   
       
