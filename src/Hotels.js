@@ -15,13 +15,11 @@ function Hotels({trip}) {
 
   return(
     <>
-       <div className="card mt-5">
+      <div className="card mt-5">
         <div className="card-header font-weight-bold">
           <h4>Hotels</h4>
-          {/* <button className="btn btn-black">Create</button> */}
         </div>
-        
-        <div className="card-body d-flex justify-content-around flex-wrap5">
+        <div className="card-body d-flex justify-content-around flex-wrap">
           {hotels.map((hotel, index) => <Hotel key={hotel.id} hotel={hotel} index={index} deleteId={deleteId} /> )}
         </div>
       </div>

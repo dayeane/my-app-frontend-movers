@@ -35,7 +35,7 @@ function Stops({trip}) {
                 <div className="card-body ">
                   <div><span className="font-weight-bold">Stop Reason:</span> {stop.stop_reason} </div>
                   <div><span className="font-weight-bold">Notes:</span> {stop.note}</div>
-                  {/* <div><span className="font-weight-bold">Cost:</span> {stop.cost.amount}</div> */}
+                  <div><span className="font-weight-bold">Cost:</span> {stop.cost.amount}</div>
                 </div>
               </div>
             )
@@ -43,7 +43,7 @@ function Stops({trip}) {
         </div>
       </div>
 
-      <StopsForm trip={trip} />
+      <StopsForm trip={trip} setStop={setStop}/>
     </>
   )
 }

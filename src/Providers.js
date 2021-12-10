@@ -21,7 +21,6 @@ function Providers({trip}) {
         <div className="card-body d-flex justify-content-around flex-wrap">
           {providers.map((provider, index ) => {
             return(
-              
               <div  className="card text-white bg-info mb-3" key={provider.id}>
                 <div className="card-header d-flex justify-content-between">
                   <h5>Provider {index + 1}</h5>
@@ -38,7 +37,7 @@ function Providers({trip}) {
         </div>
       </div>
 
-      <ProvidersForm trip={trip} />
+      <ProvidersForm trip={trip} setProviders={setProviders}/>
     </>
   )
 }

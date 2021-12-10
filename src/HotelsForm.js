@@ -30,7 +30,6 @@ function HotelsForm({trip, setHotels}) {
     .then(res => res.json())
     .then(data => {
       setHotels(data)
-      debugger
       target.reset()
     })
   }
