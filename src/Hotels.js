@@ -4,7 +4,6 @@ import Hotel from "./Hotel"
 
 function Hotels({trip}) {
   const [hotels, setHotels] = useState(trip.hotels);
-  let hotelCards = {}
 
   function deleteId(id) {
     fetch(`http://localhost:9292/trips/${trip.id}/hotels/${id}`, {
@@ -23,7 +22,7 @@ function Hotels({trip}) {
         </div>
         
         <div className="card-body d-flex justify-content-around flex-wrap5">
-          {hotels.map((hotel, index) => <Hotel hotel={hotel} index={index} deleteId={deleteId} /> )}
+          {hotels.map((hotel, index) => <Hotel key={hotel.id} hotel={hotel} index={index} deleteId={deleteId} /> )}
         </div>
       </div>
       <HotelsForm trip={trip} />

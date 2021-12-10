@@ -28,10 +28,7 @@ function TripForm({trip, setTrip}) {
     })
     .then(res => res.json())
     .then(data => {
-      // e.currentTarget.reset();
-      debugger
       setTrip(data)
-
     })
    
   }
